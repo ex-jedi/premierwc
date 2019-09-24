@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/css/universal.css?v=1.0">
 	<!-- TODO: Add version query string to CSS file for cache busting  -->
-	<link rel="stylesheet" href="<?php perch_page_attribute('css', array('template' => 'bits.html')) ;?>">
+	<link rel="stylesheet" href="<?php perch_page_attribute('css', array('template' => 'bits.html')) ;?>?v=1.0">
 	<!-- Perch Meta -->
 	<?php
 	$domain        = 'https://'.$_SERVER["HTTP_HOST"];
@@ -58,6 +58,10 @@
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 		<div itemscope itemtype="http://schema.org/LocalBusiness" class="site-wrapper <?php perch_page_attribute('wrapperClass', array('template' => 'bits.html'));?>">
 			<header class="main-header">
+			<div class="top-header-div">
+				<?php perch_content("Header Logo"); ?>
+				<?php perch_content("Header Contact"); ?>
+			</div>
 				<nav class="main-nav">
 					<?php perch_pages_navigation(array(
 							'hide-extensions' => true,
