@@ -56,7 +56,14 @@ body {
 // *=========================================
 
 .top-header-div {
+  @include flex(row);
+  justify-content: space-between;
   width: 100%;
+}
+
+.header-contact-div {
+  @include flex(column);
+
 }
 
 // *=========================================
