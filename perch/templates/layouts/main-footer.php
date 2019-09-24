@@ -1,6 +1,6 @@
 <footer class="main-footer">
 	<div class="footer-legal">
-		<p class="copyright" >&copy; <?php echo date("Y"); ?> KEN LONG</p>
+		<p class="copyright" >&copy; <?php echo date("Y"); ?> Premier Window Cleaning</p>
 		<p class="privacy"><a href="/privacy-policy.php">PRIVACY &amp; COOKIE PRIVACY POLICY</a></p>
 		<p class="terms"><a href="/terms.php">TERMS OF USE</a></p>
 	</div>
