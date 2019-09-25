@@ -212,13 +212,15 @@ select {
   }
 }
 
-//********** Honeypot **********
+//********** Anti Spam **********
 
-.form-title {
+.form-identification-number {
+  width: 1px;
+  height: 1px;
   overflow: hidden;
-  position: absolute;
-  z-index: -10;
-  opacity: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  display: none;
+  visibility: hidden;
 }
 
 // *=========================================

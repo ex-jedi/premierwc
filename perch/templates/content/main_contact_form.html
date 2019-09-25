@@ -5,12 +5,6 @@
 
   <perch:form class="main-contact-form" id="contact" method="post" app="perch_forms">
 
-
-    <div class="form-title">
-        <perch:label for="formTitle">Title: Leave this field blank if you are a human</perch:label>
-        <perch:input type="text" id="formTitle" aria-hidden="true" autocomplete="off" antispam="honeypot">
-    </div>
-
     <div>
         <perch:label for="name">Name <span title="Required">*</span></perch:label>
         <perch:input type="text" id="name" required="true" label="Name">
@@ -50,6 +44,11 @@
     <div class="radio-div">
         <perch:label for="conservatory">Do you have a conservatory? <span title="Required">*</span></perch:label>
         <perch:input class="" id="conservatory" type="radio" label="Conservatory"  required options="Yes,No">
+    </div>
+
+    <div class="form-identification-number">
+        <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>
+        <perch:input type="text" id="messageAreaOne" aria-hidden="true" autocomplete="off" antispam="honeypot" />
     </div>
 
     <div class="checkbox-div">
