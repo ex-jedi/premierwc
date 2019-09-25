@@ -46,11 +46,11 @@ $grid-gap: 0 1rem;
 
 //Font Stacks
 @mixin heading-font-stack {
-  font-family: 'Asap', sans-serif;
+  font-family: "Asap", sans-serif;
 }
 
 @mixin font-stack {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
 }
 
 //Fancy Link Underline
@@ -61,12 +61,13 @@ $grid-gap: 0 1rem;
 
   &:hover,
   &focus {
+    color: $colour;
     border-bottom: 3px solid $colour;
     padding-bottom: 0;
     margin-bottom: 5px;
     outline: 0;
 
-    @include breakpoint(menu) {
+    @include breakpoint(500) {
       border-bottom: 3px solid transparent;
     }
   }
@@ -78,7 +79,7 @@ $grid-gap: 0 1rem;
   border-bottom: 3px solid transparent;
   padding-bottom: 5px;
 
-  @include breakpoint(menu) {
+  @include breakpoint(500) {
     border-bottom: 3px solid transparent;
     text-decoration: underline;
   }
@@ -90,7 +91,7 @@ $grid-gap: 0 1rem;
     margin-bottom: 5px;
     outline: 0;
 
-    @include breakpoint(menu) {
+    @include breakpoint(500) {
       border-bottom: 3px solid transparent;
     }
   }
@@ -98,7 +99,7 @@ $grid-gap: 0 1rem;
   &:visited {
     border-bottom: 3px solid $link-visited;
 
-    @include breakpoint(menu) {
+    @include breakpoint(500) {
       border-bottom: 3px solid transparent;
     }
   }
@@ -115,7 +116,7 @@ $dark-font-colour: #424141;
 $light-font-colour: #f2f0eb;
 
 //Link Colours
-$link-colour: #486a8d;
+$link-colour: #6fc8ba;
 
 //Background Colours
 $dark-background-colour: #231f20;
