@@ -48,7 +48,7 @@
 }
 
 .homepage-list {
-  margin-right: 3rem;
+  margin-right: 1rem;
   padding-right: 4rem;
   position: relative;
 
@@ -58,4 +58,21 @@
     top: 1px;
     right: 0;
   }
+}
+
+.homepage-list-after {
+  @include flex(column);
+  justify-content: center;
+}
+
+.first-after-paragraph {
+  font-style: italic;
+  margin: 0;
+}
+
+.second-after-paragraph {
+  font-style: italic;
+  font-size: 2.5rem;
+  color: $link-colour;
+  margin: 1rem 0 0;
 }
