@@ -49,8 +49,13 @@
 
 .homepage-list {
   margin-right: 3rem;
-  background-image: url(/images/bracket.png);
-  background-repeat: no-repeat;
   padding-right: 4rem;
-  background-position: top right;
+  position: relative;
+
+  &::after {
+    content: url("/images/bracket.png");
+    position: absolute;
+    top: 1px;
+    right: 0;
+  }
 }
