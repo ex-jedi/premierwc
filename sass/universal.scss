@@ -64,6 +64,9 @@ body {
 .header-contact-div {
   @include flex(column);
 
+  a {
+    color: $light-font-colour;
+  }
 }
 
 // *=========================================

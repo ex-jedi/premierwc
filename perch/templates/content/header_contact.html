@@ -1,20 +1,18 @@
 <!-- Address details marked up with structured data -->
 <div class="header-contact-div" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-
-  <span class="header-twitter-span">
-    <a class="header-twitter-link"  href="<perch:content id="headerTwitterLink" type="text" label="Header Twitter Link"  required  html>">
-      <img class="header-twitter-logo"  src="/images/twitter-icon-black.png" alt="Twitter icon">
+  <p class="header-email" itemprop="email">
+    <a class="header-email-link"  href="mailto:<perch:content id="addressEmail" type="text" label="Email Address" required>">
+      <perch:content id="addressEmail">
     </a>
-  </span>
-
-  <span class="header-address-span header-email" itemprop="email">
-    <perch:content id="addressEmail" type="text" label="Email Address" required>
- </span>
-
-  <span class="header-span header-phone" itemprop="telephone">
+  </p>
+  <p class="header-phone" itemprop="telephone">
     <a class="header-phone-link" href="tel:<perch:content id="addressTelephone" type="text" label="Telephone Number" required>">
       <perch:content id="addressTelephone" type="text" label="Telephone Number" required>
     </a>
-  </span>
-
+  </p>
+  <p class="header-twitter">
+    <a class="header-twitter-link"  href="<perch:content id="headerTwitterLink" type="text" label="Header Twitter Link"  required  html>">
+      <img class="header-twitter-logo"  src="/images/twitter-icon.png" alt="Twitter icon">
+    </a>
+  </p>
 </div>
