@@ -45,8 +45,12 @@ $grid-gap: 0 1rem;
 //********** Typeography **********
 
 //Font Stacks
-@mixin heading-font-stack {
+@mixin header-font-stack {
   font-family: "Asap", sans-serif;
+}
+
+@mixin heading-font-stack {
+  font-family: "Alegreya SC", serif;
 }
 
 @mixin font-stack {

@@ -45,6 +45,12 @@ body {
 
 //********** Headings**********
 
+h1,
+h2,
+h3 {
+  @include heading-font-stack;
+}
+
 //********** Containers **********
 
 //********** Paragraphs **********
@@ -62,7 +68,7 @@ body {
 // *=========================================
 
 .main-header {
-  @include heading-font-stack;
+  @include header-font-stack;
 }
 
 .top-header-div {

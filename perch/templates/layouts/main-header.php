@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="/css/universal.css?v=1.0">
 	<link rel="stylesheet" href="<?php perch_page_attribute('css', array('template' => 'bits.html')) ;?>?v=1.0">
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Asap:400,700|Crimson+Text:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC:400,700|Asap:400,700|Crimson+Text:400,700&display=swap" rel="stylesheet">
 	<!-- Perch Meta -->
 	<?php
 	$domain        = 'https://'.$_SERVER["HTTP_HOST"];

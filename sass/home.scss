@@ -10,6 +10,8 @@
 //** Top Section  **
 //*=========================================
 
+//********** Homepage images **********
+
 .main-image-div {
   width: 100%;
   position: relative;
@@ -25,4 +27,13 @@
   position: absolute;
   right: -0.5rem;
   top: 1rem;
+}
+
+//********** Homepage Top Section Text **********
+
+.homepage-heading {
+  text-align: center;
+  color: $link-colour;
+  font-size: 2.25rem;
+  font-weight: 400;
 }
