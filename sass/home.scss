@@ -36,13 +36,14 @@
   color: $link-colour;
   font-size: 2.25rem;
   font-weight: 400;
+  margin: $section-spacing auto;
 }
 
 //* Bracket List Div
 
 .homepage-bracket-list-div {
   @include flex(row);
-  margin: 0 auto;
+  margin: 0 auto $section-spacing;
   width: fit-content;
   font-size: 1.75rem;
 }
@@ -75,4 +76,20 @@
   font-size: 2.5rem;
   color: $link-colour;
   margin: 1rem 0 0;
+}
+
+.homepage-text-area {
+  text-align: center;
+}
+
+.homepage-pricing-link {
+  display: block;
+  color: $light-font-colour;
+  width: fit-content;
+  margin: $large-section-spacing auto;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: $accent-font-colour;
 }

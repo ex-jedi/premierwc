@@ -145,6 +145,11 @@ h3 {
 
 main {
   @include font-stack;
+  font-size: 1.25rem;
+}
+
+section {
+  padding: 0 $large-section-spacing;
 }
 
 // *=========================================
@@ -154,3 +159,7 @@ main {
 // *=========================================
 // ** Footer  **
 // *=========================================
+
+footer {
+  padding: $small-section-spacing $large-section-spacing;
+}
