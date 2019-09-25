@@ -33,7 +33,7 @@
 
 .homepage-heading {
   text-align: center;
-  color: $link-colour;
+  color: $accent-font-colour;
   font-size: 2.25rem;
   font-weight: 400;
   margin: $section-spacing auto;
@@ -74,7 +74,7 @@
 .second-after-paragraph {
   font-style: italic;
   font-size: 2.5rem;
-  color: $link-colour;
+  color: $accent-font-colour;
   margin: 1rem 0 0;
 }
 
@@ -84,7 +84,7 @@
 
 .homepage-pricing-link {
   display: block;
-  color: $light-font-colour;
+  color: $dark-font-colour;
   width: fit-content;
   margin: $large-section-spacing auto;
   padding: 1rem;
@@ -92,4 +92,10 @@
   text-decoration: none;
   font-weight: bold;
   background-color: $accent-font-colour;
+  transition: all $transition-duration;
+
+  &:hover {
+    background-color: $darker-link-colour;
+    color: $light-font-colour;
+  }
 }

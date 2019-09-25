@@ -5,9 +5,7 @@
 	<section class="homepage-promo-section">
 		<?php perch_content("Homepage Promo Text"); ?>
 	</section>
-	<section class="contact-form-section">
 		<?php perch_content("Contact Form"); ?>
-	</section>
 </main>
 <?php perch_layout('main-footer'); ?>
 <!-- <?php PerchUtil::output_debug(); ?> -->
