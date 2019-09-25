@@ -46,9 +46,11 @@ $grid-gap: 0 1rem;
 
 //Font Stacks
 @mixin heading-font-stack {
+  font-family: 'Asap', sans-serif;
 }
 
 @mixin font-stack {
+  font-family: 'Crimson Text', serif;
 }
 
 //Fancy Link Underline
@@ -117,6 +119,7 @@ $link-colour: #486a8d;
 
 //Background Colours
 $dark-background-colour: #231f20;
+$light-background-colour: #f2f0eb;
 
 //********** Transition Timings**********
 

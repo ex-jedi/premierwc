@@ -4,8 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/css/universal.css?v=1.0">
-	<!-- TODO: Add version query string to CSS file for cache busting  -->
 	<link rel="stylesheet" href="<?php perch_page_attribute('css', array('template' => 'bits.html')) ;?>?v=1.0">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Asap:400,700|Crimson+Text:400,700&display=swap" rel="stylesheet">
 	<!-- Perch Meta -->
 	<?php
 	$domain        = 'https://'.$_SERVER["HTTP_HOST"];
