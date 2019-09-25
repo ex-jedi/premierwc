@@ -1,18 +1,12 @@
 <!-- Address details marked up with structured data -->
 <div class="header-contact-div" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-  <p class="header-email" itemprop="email">
-    <a class="header-email-link"  href="mailto:<perch:content id="addressEmail" type="text" label="Email Address" required>">
-      <perch:content id="addressEmail">
-    </a>
-  </p>
-  <p class="header-phone" itemprop="telephone">
-    <a class="header-phone-link" href="tel:<perch:content id="addressTelephone" type="text" label="Telephone Number" required>">
-      <perch:content id="addressTelephone" type="text" label="Telephone Number" required>
-    </a>
-  </p>
-  <p class="header-twitter">
-    <a class="header-twitter-link"  href="<perch:content id="headerTwitterLink" type="text" label="Header Twitter Link"  required  html>">
-      <img class="header-twitter-logo"  src="/images/twitter-icon.png" alt="Twitter icon">
-    </a>
-  </p>
+  <a class="header-email-link" itemprop="email"  href="mailto:<perch:content id="addressEmail" type="text" label="Email Address" required>">
+    <perch:content id="addressEmail">
+  </a>
+  <a class="header-phone-link" itemprop="telephone"  href="tel:<perch:content id="addressTelephone" type="text" label="Telephone Number" required>">
+    <perch:content id="addressTelephone" type="text" label="Telephone Number" required>
+  </a>
+  <a class="header-twitter-link"  href="<perch:content id="headerTwitterLink" type="text" label="Header Twitter Link"  required  html>">
+    <img class="header-twitter-logo"  src="/images/twitter-icon.png" alt="Twitter icon">
+  </a>
 </div>
