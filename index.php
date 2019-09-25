@@ -2,7 +2,7 @@
 <?php perch_layout('main-header'); ?>
 <main class="main-content homepage-main-content">
 	<section class="homepage-promo-section">
-		<?php perch_content("Homepage Main Image"); ?>
+		<?php perch_content("Homepage Images"); ?>
 	</section>
 	<section class="comtact-form-section">
 
