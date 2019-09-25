@@ -156,6 +156,70 @@ section {
 // ** Forms  **
 // *=========================================
 
+.main-contact-form {
+  @include flex(column);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-form-heading {
+  color: $accent-font-colour;
+  font-weight: normal;
+}
+
+label {
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.25rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+
+.radio-div,
+.checkbox-div {
+  margin-bottom: $small-section-spacing;
+
+  label {
+    display: inline;
+  }
+
+  input {
+    width: fit-content;
+  }
+
+  a {
+    color: $light-font-colour;
+  }
+}
+
+
+#form1_submit {
+  background-color: $link-colour;
+  border: 0;
+  transition: all $transition-duration;
+  margin-top: $small-section-spacing;
+
+  &:hover,
+  &:focus {
+    background-color: $darker-link-colour;
+    color: $light-font-colour;
+  }
+}
+
+//********** Honeypot **********
+
+.form-title {
+  overflow: hidden;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+
 // *=========================================
 // ** Footer  **
 // *=========================================

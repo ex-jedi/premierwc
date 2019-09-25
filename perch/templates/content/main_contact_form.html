@@ -1,10 +1,10 @@
 <section class="contact-form-section">
-
-  <perch:form class="contact-form" id="contact" method="post" app="perch_forms">
-
     <h2 class="contact-form-heading">
         <perch:content id="contactFormHeading" type="text" label="Contact Form Heading" divider-before="Contact Form" help="Optional heading for the contact form">
     </h2>
+
+  <perch:form class="main-contact-form" id="contact" method="post" app="perch_forms">
+
 
     <div class="form-title">
         <perch:label for="formTitle">Title: Leave this field blank if you are a human</perch:label>
@@ -47,7 +47,7 @@
         <perch:input class="" id="housefloors" type="select" label="Number of floors" required placeholder="Choose an option" options="Bungalow/Ground floor flat,2 storey house/1st floor flat,3 storey house/2nd floor flat">
     </div>
 
-    <div>
+    <div class="radio-div">
         <perch:label for="conservatory">Do you have a conservatory? <span title="Required">*</span></perch:label>
         <perch:input class="" id="conservatory" type="radio" label="Conservatory"  required options="Yes,No">
     </div>
@@ -57,7 +57,7 @@
         <perch:label class="consent-check-label" for="consentCheck">By checking this box you accept the <a target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">Premier Window Cleaning Privacy and Cookie Policy.</a>  </perch:label>
     </div>
 
-    <div class="button">
+    <div class="form-submit-div">
         <perch:input type="submit" id="submit" value="Send">
     </div>
 
