@@ -1,6 +1,6 @@
-// =======================================================================================
+// *=======================================================================================
 // ** Styles that apply to all pages across the site  **
-// =======================================================================================
+// *=======================================================================================
 
 //**************************************** Imports  ****************************************
 
@@ -8,44 +8,225 @@
 
 //******************************************************************************************
 
-// =========================================
+// *=========================================
 // ** Wrappers  **
-// =========================================
+// *=========================================
 
-// =========================================
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 20px;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url(/images/background-image.png);
+  color: $light-font-colour;
+}
+
+.site-wrapper {
+  margin: 0 10rem;
+  background-color: $dark-background-colour;
+}
+
+// *=========================================
 // ** Content container and block **
-// =========================================
+// *=========================================
 
 //********** Headings**********
+
+h1,
+h2,
+h3 {
+  @include heading-font-stack;
+}
 
 //********** Containers **********
 
 //********** Paragraphs **********
 
-// =========================================
+// *=========================================
 // ** Inline **
-// =========================================
+// *=========================================
 
 //********** Images **********
 
 //********** Links **********
 
-// =========================================
+// *=========================================
 // ** Header  **
-// =========================================
+// *=========================================
 
-// =========================================
+.main-header {
+  @include header-font-stack;
+}
+
+.top-header-div {
+  @include flex(row);
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
+.header-contact-div {
+  @include flex(column);
+  align-items: flex-end;
+
+  a {
+    color: $light-font-colour;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.header-twitter-logo {
+  width: 40px;
+}
+
+// *=========================================
 // ** Main Nav  **
-// =========================================
+// *=========================================
 
-// =========================================
+.main-nav {
+  background-color: $light-background-colour;
+  width: 100%;
+}
+
+.main-nav-ul {
+  @include flex(row);
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.main-nav-li {
+  list-style-type: none;
+  width: auto;
+}
+
+#selected {
+  a {
+    color: $link-colour;
+    border-bottom: 3px solid $link-colour;
+    padding-bottom: 0;
+    pointer-events: none;
+  }
+}
+
+.main-nav-link {
+  text-decoration: none;
+  color: $dark-font-colour;
+  display: inline-block;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: all $transition-duration;
+
+  &:hover,
+  &:focus {
+    color: $link-colour;
+  }
+}
+
+// *=========================================
 // ** Body **
-// =========================================
+// *=========================================
 
-// =========================================
+main {
+  @include font-stack;
+  font-size: 1.25rem;
+}
+
+section {
+  padding: 0 $large-section-spacing;
+}
+
+// *=========================================
 // ** Forms  **
-// =========================================
+// *=========================================
 
-// =========================================
+.main-contact-form {
+  @include flex(column);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contact-form-heading {
+  color: $accent-font-colour;
+  font-weight: normal;
+  text-align: center;
+}
+
+label {
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.25rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+
+.radio-div,
+.checkbox-div {
+  margin-bottom: $small-section-spacing;
+
+  label {
+    display: inline;
+  }
+
+  input {
+    width: fit-content;
+  }
+
+  a {
+    color: $light-font-colour;
+  }
+}
+
+
+#form1_submit {
+  background-color: $link-colour;
+  border: 0;
+  transition: all $transition-duration;
+  margin-top: $small-section-spacing;
+
+  &:hover,
+  &:focus {
+    background-color: $darker-link-colour;
+    color: $light-font-colour;
+  }
+}
+
+//********** Anti Spam **********
+
+.form-identification-number {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  display: none;
+  visibility: hidden;
+}
+
+// *=========================================
 // ** Footer  **
-// =========================================
+// *=========================================
+
+footer {
+  padding: $small-section-spacing $large-section-spacing;
+}

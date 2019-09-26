@@ -1,0 +1,71 @@
+<section class="contact-form-section">
+    <h2 class="contact-form-heading">
+        <perch:content id="contactFormHeading" type="text" label="Contact Form Heading" divider-before="Contact Form" help="Optional heading for the contact form">
+    </h2>
+
+  <perch:form class="main-contact-form" id="contact" method="post" app="perch_forms">
+
+    <div>
+        <perch:label for="name">Name <span title="Required">*</span></perch:label>
+        <perch:input type="text" id="name" required="true" label="Name">
+        <perch:error class="form-error" for="name" type="required">Please check your name.</perch:error>
+    </div>
+
+    <div>
+        <perch:label for="tel">Phone Number <span title="Required">*</span></perch:label>
+        <perch:input type="tel" id="tel" required="true" label="Phone Number">
+    </div>
+
+    <div>
+        <perch:label for="email">Email <span title="Required">*</span></perch:label>
+        <perch:input type="email" id="email" label="Email">
+    </div>
+
+    <div>
+        <perch:label for="addressone">First line of address <span title="Required">&ast;</span></perch:label>
+        <perch:input type="text" id="addressone" required="true" label="First Line Of Address">
+    </div>
+
+    <div>
+        <perch:label for="postcode">Postcode <span title="Required">&ast;</span></perch:label>
+        <perch:input type="text" id="postcode" required="true" label="Postcode">
+    </div>
+
+    <div>
+      <perch:label for="housesize">House size</perch:label>
+      <perch:input id="housesize" type="select" label="House Size" required placeholder="Choose an option"  options="One bedroom,Two bedrooms,Three bedrooms,Four bedrooms,Five bedrooms,Six bedrooms,Seven bedrooms,More than seven bedrooms" >
+    </div>
+
+    <div>
+        <perch:label for="housefloors">Number of floors <span title="Required">*</span></perch:label>
+        <perch:input class="" id="housefloors" type="select" label="Number of floors" required placeholder="Choose an option" options="Bungalow/Ground floor flat,2 storey house/1st floor flat,3 storey house/2nd floor flat">
+    </div>
+
+    <div class="radio-div">
+        <perch:label for="conservatory">Do you have a conservatory? <span title="Required">*</span></perch:label>
+        <perch:input class="" id="conservatory" type="radio" label="Conservatory"  required options="Yes,No">
+    </div>
+
+    <div class="form-identification-number">
+        <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>
+        <perch:input type="text" id="messageAreaOne" aria-hidden="true" autocomplete="off" antispam="honeypot" />
+    </div>
+
+    <div class="checkbox-div">
+        <perch:input class="consent-checkbox" id="consentCheck" type="checkbox" label="Consent Checkbox" value="Yes"  required>
+        <perch:label class="consent-check-label" for="consentCheck">By checking this box you accept the <a target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">Premier Window Cleaning Privacy and Cookie Policy.</a>  </perch:label>
+    </div>
+
+    <div class="form-submit-div">
+        <perch:input type="submit" id="submit" value="Send">
+    </div>
+
+    <perch:success>
+        <div class="success">
+            <perch:content id="success" type="textarea" label="Thank You Message" help="Message to display when form is submitted"  editor="redactor" html required>
+        </div>
+    </perch:success>
+
+  </perch:form>
+
+</section>
