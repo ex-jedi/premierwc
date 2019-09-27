@@ -9,4 +9,3 @@
 		<?php perch_content("Contact Form"); ?>
 </main>
 <?php perch_layout('main-footer'); ?>
-<!-- <?php PerchUtil::output_debug(); ?> -->
