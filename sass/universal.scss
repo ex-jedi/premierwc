@@ -163,6 +163,7 @@ section {
 
   label {
     display: block;
+    margin-bottom: 0.25rem;
   }
 
   input,
@@ -199,17 +200,64 @@ section {
   }
 }
 
+.radio-input-wrapper-span {
+  position: relative;
+
+  &:first-of-type {
+    margin-right: 2rem;
+  }
+
+  input {
+    position: absolute;
+    top: .5rem;
+  }
+
+  #form1_conservatory1 {
+    left: 2rem;
+  }
+
+  #form1_conservatory2 {
+    left: 1.5rem;
+  }
+}
+
+
+
+.required-span {
+  color: $accent-font-colour;
+}
+
+.neighbour-refferal-div,
+.contact-form-terms,
+.form-consent-div {
+  margin-bottom: $section-spacing;
+}
 
 #form1_submit {
   background-color: $link-colour;
   border: 0;
   transition: all $transition-duration;
   margin-top: $small-section-spacing;
+  border-radius: 5px;
 
   &:hover,
   &:focus {
     background-color: $darker-link-colour;
     color: $light-font-colour;
+  }
+}
+.contact-form-terms {
+  padding: 0.5rem;
+  border: 2px solid $light-font-colour;
+
+
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
