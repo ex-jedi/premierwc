@@ -173,9 +173,10 @@ section {
     font-size: 1.2rem;
     font-family: inherit;
     margin-bottom: 1rem;
-    border: 2px solid $light-background-colour;
+    border: 3px solid $light-background-colour;
   }
 }
+
 
 .contact-form-heading {
   color: $accent-font-colour;
@@ -222,8 +223,6 @@ section {
   }
 }
 
-
-
 .required-span {
   color: $accent-font-colour;
 }
@@ -262,16 +261,24 @@ section {
   }
 }
 
+.success {
+  text-align: center;
+}
+
 //********** Validation **********
 
 .form-input-validation {
   &:invalid {
-    border: 2px solid $warning;
+    border: 3px solid $warning;
   }
 
   &:valid {
-    border: 2px solid $accent-font-colour;
+    border: 3px solid $valid;
   }
+}
+
+.not-valid {
+  border: 3px solid $warning !important;
 }
 
 //********** Anti Spam **********
