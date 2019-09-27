@@ -173,6 +173,7 @@ section {
     font-size: 1.2rem;
     font-family: inherit;
     margin-bottom: 1rem;
+    border: 2px solid $light-background-colour;
   }
 }
 
@@ -258,6 +259,18 @@ section {
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+}
+
+//********** Validation **********
+
+.form-input-validation {
+  &:invalid {
+    border: 2px solid $warning;
+  }
+
+  &:valid {
+    border: 2px solid $accent-font-colour;
   }
 }
 

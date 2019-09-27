@@ -57,7 +57,7 @@
 
 </head>
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
-		<div itemscope itemtype="http://schema.org/LocalBusiness" class="site-wrapper <?php perch_page_attribute('wrapperClass', array('template' => 'bits.html'));?>">
+		<div id="vue-wrapper" itemscope itemtype="http://schema.org/LocalBusiness" class="site-wrapper <?php perch_page_attribute('wrapperClass', array('template' => 'bits.html'));?>">
 			<header class="main-header">
 			<div class="top-header-div">
 				<?php perch_content("Header Logo"); ?>
