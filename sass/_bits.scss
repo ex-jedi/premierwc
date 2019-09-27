@@ -45,6 +45,19 @@ $grid-gap: 0 1rem;
   font-family: "Crimson Text", serif;
 }
 
+//Paragraph Top and Bottom Margin Mixin
+
+@mixin first-and-last-paragraph {
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
 //********** Spacing & Sizing  **********
 
 //Font Sizing
@@ -52,15 +65,14 @@ $main-font-size: 1.25rem;
 $larger-font-size: 1.5rem;
 $smaller-font-size: 1rem;
 
-//Headings
-$large-h1-spacing: 5rem;
-$h1-spacing: 2.5rem;
-$h2-spacing: 1.5rem;
-$h3-spacing: 1rem;
+//Heading Sizes
+$heading-size-large: 3.5rem;
+$heading-size-medium: 2rem;
+$heading-size-small: $main-font-size;
 
 //Sections
 $large-section-spacing: 5rem;
-$section-spacing: 2.5rem;
+$section-spacing: 3.5rem;
 $small-section-spacing: 1rem;
 
 //Paragraphs
@@ -70,8 +82,6 @@ $paragraph-spacing-small: .5rem;
 
 //Forms
 $input-spacing: 1%;
-
-//Other Spacing
 
 //Fancy Link Underline
 @mixin link-underline($colour) {
