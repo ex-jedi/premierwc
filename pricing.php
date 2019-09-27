@@ -3,7 +3,7 @@
 <main class="main-content pricing-main-content">
 <?php perch_content("Pricing Images"); ?>
 	<section class="homepage-promo-section">
-		<?php perch_content("Homepage Promo Text"); ?>
+		<?php perch_content("Pricing Text Area"); ?>
 	</section>
 		<?php perch_content("Contact Form Title"); ?>
 		<?php perch_content("Contact Form"); ?>
