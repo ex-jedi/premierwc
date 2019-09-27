@@ -1,0 +1,46 @@
+<!-- Address details marked up with structured data -->
+<div class="footer-contact-div" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+
+  <p class="footer-address-paragraph" itemprop="name">
+    <perch:content id="businessName" type="text" label="Business Name" required >
+  </p>
+
+  <p class="footer-address-paragraph" itemprop="streetAddress">
+    <perch:content id="addressLineOne" type="text" label="Address Line One" required>
+  </p>
+
+  <perch:if exists="addressLineTwo">
+      <p class="footer-address-paragraph" itemprop="streetAddress">
+        <perch:content id="addressLineTwo" type="text" label="Address Line Two" help="Optional" >
+      </p>
+  </perch:if>
+
+  <perch:if exists="addressLineThree">
+      <p class="footer-address-paragraph" itemprop="streetAddress">
+        <perch:content id="addressLineThree" type="text" label="Address Line Three" help="Optional" >
+      </p>
+  </perch:if>
+
+  <p class="footer-address-paragraph" itemprop="addressLocality">
+    <perch:content id="addressTown" type="text" label="Town" required>
+  </p>
+
+  <perch:if exists="addressCounty">
+    <p class="footer-address-paragraph" itemprop="addressRegion">
+      <perch:content id="addressCounty" type="text" label="County" help="optional" >
+    </p>
+  </perch:if>
+
+  <p class="footer-address-paragraph" itemprop="postalCode">
+    <perch:content id="addressPostCode" type="text" label="Postcode" required>
+    </p>
+
+  <p class="footer-address-paragraph footer-address-email" itemprop="email">
+    <perch:content id="addressEmail" type="text" label="Email Address" required>
+ </p>
+
+  <p class="footer-address-paragraph footer-address-phone" itemprop="telephone">
+    <perch:content id="addressTelephone" type="text" label="Telephone Number" required>
+  </p>
+
+</div>

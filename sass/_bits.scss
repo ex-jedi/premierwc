@@ -45,6 +45,34 @@ $grid-gap: 0 1rem;
   font-family: "Crimson Text", serif;
 }
 
+//********** Spacing & Sizing  **********
+
+//Font Sizing
+$main-font-size: 1.25rem;
+$larger-font-size: 1.5rem;
+$smaller-font-size: 1rem;
+
+//Headings
+$large-h1-spacing: 5rem;
+$h1-spacing: 2.5rem;
+$h2-spacing: 1.5rem;
+$h3-spacing: 1rem;
+
+//Sections
+$large-section-spacing: 5rem;
+$section-spacing: 2.5rem;
+$small-section-spacing: 1rem;
+
+//Paragraphs
+$large-paragraph-spacing: 3rem;
+$paragraph-spacing: 1.5rem;
+$paragraph-spacing-small: .5rem;
+
+//Forms
+$input-spacing: 1%;
+
+//Other Spacing
+
 //Fancy Link Underline
 @mixin link-underline($colour) {
   transition: all $transition-duration;
@@ -64,6 +92,8 @@ $grid-gap: 0 1rem;
     }
   }
 }
+
+
 
 // =========================================
 // ** Variables  **
@@ -94,27 +124,7 @@ $transition-duration: 0.3s ease-in-out 0s;
 $transition-duration-fast: 0.2s ease-in-out 0s;
 $transition-duration-slow: 0.8s ease-in-out 0s;
 
-//********** Spacing & layout  **********
 
-//Headings
-$large-h1-spacing: 5rem;
-$h1-spacing: 2.5rem;
-$h2-spacing: 1.5rem;
-$h3-spacing: 1rem;
-
-//Sections
-$large-section-spacing: 5rem;
-$section-spacing: 2.5rem;
-$small-section-spacing: 1rem;
-
-//Paragraphs
-$large-paragraph-spacing: 3rem;
-$paragraph-spacing: 1.5rem;
-
-//Forms
-$input-spacing: 1%;
-
-//Other Spacing
 
 // =========================================
 // ** Browser Quirks  **
