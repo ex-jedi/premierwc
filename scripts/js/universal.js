@@ -2,7 +2,6 @@
 // ** Contact Form Validation Highlighter  **
 // =========================================
 
-
 const formInput = document.querySelectorAll('input');
 const formSelect = document.querySelectorAll('select');
 const emailInput = document.querySelector('.email-input');
