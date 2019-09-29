@@ -91,6 +91,7 @@ h3 {
 
 .header-twitter-logo {
   width: 40px;
+  margin-top: 0.5rem;
 }
 
 .header-phone-link {
@@ -367,3 +368,9 @@ footer {
   @include first-and-last-paragraph;
 }
 
+#map {
+  height: 450px;
+  width: 100%;
+  color: $dark-font-colour;
+  border-top: 4px solid #000;
+}
