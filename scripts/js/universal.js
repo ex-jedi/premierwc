@@ -1,14 +1,7 @@
-// * =========================================
-// ** Vue  **
-// * =========================================
+// =========================================
+// ** Contact Form Validation Highlighter  **
+// =========================================
 
-const app = new Vue({
-  el: '#vue-wrapper',
-  data: {
-    navPull: false,
-    outlineHide: true,
-  },
-});
 
 const formInput = document.querySelectorAll('input');
 const formSelect = document.querySelectorAll('select');
