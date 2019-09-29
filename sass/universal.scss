@@ -74,13 +74,19 @@ h3 {
 .top-header-div {
   @include flex(row);
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 1rem;
+}
+
+.main-logo {
+  margin: 1rem 0;
 }
 
 .header-contact-div {
   @include flex(column);
   align-items: flex-end;
+  padding-right: 1rem;
 
   a {
     color: $light-font-colour;
