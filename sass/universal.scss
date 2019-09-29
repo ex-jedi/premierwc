@@ -367,10 +367,8 @@ footer {
   @include first-and-last-paragraph;
 }
 
-.code-embed-div {
+#map {
+  height: 400px;
   width: 100%;
-
-  iframe {
-    width: 100%;
-  }
+  color: $dark-font-colour;
 }
