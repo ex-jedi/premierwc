@@ -367,12 +367,10 @@ footer {
   @include first-and-last-paragraph;
 }
 
-.map-div,
-.cmsmap {
+.code-embed-div {
   width: 100%;
-  height: 500px;
-}
 
-.cmsmap img {
-  // max-width: auto;
+  iframe {
+    width: 100%;
+  }
 }
