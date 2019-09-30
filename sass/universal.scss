@@ -32,6 +32,7 @@ html {
 body {
   background-image: url(/images/background-image.png);
   color: $light-font-colour;
+  // min-width: 320px;
 }
 
 .site-wrapper {
@@ -195,7 +196,14 @@ section {
 
   @include breakpoint(1000) {
     width: 75%;
+  }
 
+  @include breakpoint(700) {
+    width: 85%;
+  }
+
+  @include breakpoint(400) {
+    width: 100%;
   }
 
   label {
