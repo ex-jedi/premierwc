@@ -18,6 +18,10 @@
   @include breakpoint(700) {
     flex-wrap: wrap;
   }
+
+  @include breakpoint(550) {
+    font-size: 1.5rem;
+  }
 }
 
 .homepage-list {
@@ -40,6 +44,11 @@
     background-position: center bottom;
     padding: 0 0 $large-section-spacing 1.5rem;
     background-size: 15rem;
+  }
+
+  @include breakpoint(400) {
+    padding-bottom: $section-spacing;
+    background-size: 11rem;
   }
 
 
