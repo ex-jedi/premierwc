@@ -14,24 +14,45 @@
   margin: 0 auto $section-spacing;
   width: fit-content;
   font-size: 1.75rem;
+
+  @include breakpoint(700) {
+    font-size: 1.25rem;
+  }
 }
 
 .homepage-list {
   margin-right: 1rem;
   padding-right: 4rem;
   position: relative;
+  width: 50%;
+
+  @include breakpoint(1250) {
+    flex: 1 1 auto;
+  }
+
 
   &::after {
     content: url("/images/bracket.png");
     position: absolute;
     top: 1px;
     right: 0;
+
+    @include breakpoint(700) {
+      height: 10px;
+      transform: scale(.71);
+
+    }
   }
 }
 
 .homepage-list-after {
   @include flex(column);
   justify-content: center;
+  width: 50%;
+
+  @include breakpoint(1250) {
+    flex: 1 1 auto;
+  }
 }
 
 .first-after-paragraph {

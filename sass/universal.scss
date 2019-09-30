@@ -170,6 +170,14 @@ main {
 
 section {
   padding: 0 $large-section-spacing;
+
+  @include breakpoint(1000) {
+    padding: 0 $section-spacing;
+  }
+
+  @include breakpoint(800) {
+    padding: 0 $small-section-spacing;
+  }
 }
 
 // *=========================================
@@ -380,7 +388,11 @@ footer {
   color: $accent-font-colour;
   font-size: $heading-size-large;
   font-weight: 400;
-  margin: $large-section-spacing auto;
+  margin: $section-spacing auto;
+
+  @include breakpoint(800) {
+    font-size: $heading-size-medium;
+  }
 }
 
 
