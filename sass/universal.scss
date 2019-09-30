@@ -35,8 +35,16 @@ body {
 }
 
 .site-wrapper {
-  margin: 0 10rem;
+  margin: 0 $wrapper-spacing-large;
   background-color: $dark-background-colour;
+
+  @include breakpoint(1200) {
+    margin: 0 $wrapper-spacing;
+  }
+
+  @include breakpoint(1000) {
+    margin: 0;
+  }
 }
 
 // *=========================================
@@ -172,6 +180,15 @@ section {
   @include flex(column);
   width: 50%;
   margin: 0 auto;
+
+  @include breakpoint(1500) {
+    width: 60%;
+  }
+
+  @include breakpoint(1000) {
+    width: 75%;
+
+  }
 
   label {
     display: block;
