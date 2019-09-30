@@ -16,7 +16,7 @@
   font-size: 1.75rem;
 
   @include breakpoint(700) {
-    font-size: 1.25rem;
+    flex-wrap: wrap;
   }
 }
 
@@ -30,6 +30,18 @@
     flex: 1 1 auto;
   }
 
+  @include breakpoint(700) {
+    @include flex(column);
+    align-items: center;
+    width: fit-content;
+    margin-bottom: $small-section-spacing;
+    background-image: url('/images/bracket-rotated.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding: 0 0 $large-section-spacing 1.5rem;
+    background-size: 15rem;
+  }
+
 
   &::after {
     content: url("/images/bracket.png");
@@ -38,9 +50,7 @@
     right: 0;
 
     @include breakpoint(700) {
-      height: 10px;
-      transform: scale(.71);
-
+      content: "";
     }
   }
 }
@@ -52,6 +62,11 @@
 
   @include breakpoint(1250) {
     flex: 1 1 auto;
+  }
+
+  @include breakpoint(700) {
+    width: 100%;
+    text-align: center;
   }
 }
 
