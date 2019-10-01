@@ -7,5 +7,9 @@
 	</section>
 		<?php perch_content("Contact Form Heading"); ?>
 		<?php perch_content("Contact Form"); ?>
+		<p class="go-cardless">
+		For the convenience of our clients we use GoCardless payments which is trusted by thousands of businesses including...
+		</p>
+		<img src="/images/go-cardless-banner.png" alt="Go cardless affiliates" class="go-cardless-image">
 </main>
 <?php perch_layout('main-footer'); ?>
