@@ -119,4 +119,8 @@
   width: 90%;
   margin: 0 auto;
   display: block;
+
+  @include breakpoint(1000) {
+    width: 100%;
+  }
 }
