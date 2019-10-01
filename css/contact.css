@@ -1,2 +1,2 @@
-#map{height:450px;width:100%;color:#231f20;border-top:4px solid #000;margin-bottom:3.5rem}
+@-webkit-keyframes slide-in{50%{opacity:0}to{right:-0.5rem;opacity:1}}@keyframes slide-in{50%{opacity:0}to{right:-0.5rem;opacity:1}}#map{height:450px;width:100%;color:#231f20;border-top:4px solid #000;margin-bottom:3.5rem}
 /*# sourceMappingURL=contact.css.map */

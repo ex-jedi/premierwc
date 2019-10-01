@@ -386,8 +386,12 @@ footer {
 
 .side-banner-image {
   position: absolute;
-  right: -0.5rem;
+  right: -30rem;
+  opacity: 0;
   top: 1rem;
+
+  animation: slide-in 1s ease-out 1s forwards ;
+
 }
 
 //********** Homepage Top Section Text **********
