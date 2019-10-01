@@ -30,6 +30,7 @@ html {
 }
 
 body {
+  background-color: $darkest-background-colour;
   background-image: url(/images/background-image.png);
   color: $light-font-colour;
   // min-width: 320px;
