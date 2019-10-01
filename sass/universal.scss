@@ -30,13 +30,23 @@ html {
 }
 
 body {
+  background-color: $darkest-background-colour;
   background-image: url(/images/background-image.png);
   color: $light-font-colour;
+  min-width: 300px;
 }
 
 .site-wrapper {
-  margin: 0 10rem;
+  margin: 0 $wrapper-spacing-large;
   background-color: $dark-background-colour;
+
+  @include breakpoint(1200) {
+    margin: 0 $wrapper-spacing;
+  }
+
+  @include breakpoint(1000) {
+    margin: 0;
+  }
 }
 
 // *=========================================
@@ -74,23 +84,53 @@ h3 {
 .top-header-div {
   @include flex(row);
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 1rem;
+
+  @include breakpoint(900) {
+    @include flex(column);
+  }
+}
+
+.main-logo {
+  margin: 1rem 0;
+  width: 100%;
 }
 
 .header-contact-div {
   @include flex(column);
   align-items: flex-end;
+  padding-right: 1rem;
+  font-size: $larger-font-size;
+
+  @include breakpoint(900) {
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    font-size: $main-font-size;
+  }
+
+  @include breakpoint(400) {
+    font-size: $smaller-font-size;
+  }
 
   a {
     color: $light-font-colour;
     padding-bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: $larger-font-size;
+    word-break: break-word;
+    font-size: inherit;
   }
 }
 
 .header-twitter-logo {
   width: 40px;
+  margin-top: 0.5rem;
+}
+
+.header-phone-link {
+  text-decoration: none;
 }
 
 // *=========================================
@@ -105,6 +145,7 @@ h3 {
 .main-nav-ul {
   @include flex(row);
   justify-content: center;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -145,11 +186,20 @@ h3 {
 
 main {
   @include font-stack;
-  font-size: 1.25rem;
+  font-size: $main-font-size;
+  margin-bottom: $large-section-spacing;
 }
 
 section {
   padding: 0 $large-section-spacing;
+
+  @include breakpoint(1000) {
+    padding: 0 $section-spacing;
+  }
+
+  @include breakpoint(800) {
+    padding: 0 $small-section-spacing;
+  }
 }
 
 // *=========================================
@@ -160,7 +210,45 @@ section {
   @include flex(column);
   width: 50%;
   margin: 0 auto;
+
+  @include breakpoint(1500) {
+    width: 60%;
+  }
+
+  @include breakpoint(1000) {
+    width: 75%;
+  }
+
+  @include breakpoint(700) {
+    width: 85%;
+  }
+
+  @include breakpoint(400) {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 0.25rem;
+    font-size: $main-font-size;
+    font-family: inherit;
+    margin-bottom: 1rem;
+    border: 3px solid $light-background-colour;
+    transition: all $transition-duration;
+
+    &:focus {
+      border: 3px solid $accent-font-colour;
+      outline: 0;
+    }
+  }
 }
+
 
 .contact-form-heading {
   color: $accent-font-colour;
@@ -168,18 +256,6 @@ section {
   text-align: center;
 }
 
-label {
-  display: block;
-}
-
-input,
-select {
-  width: 100%;
-  padding: 0.25rem;
-  font-size: 1.2rem;
-  font-family: inherit;
-  margin-bottom: 1rem;
-}
 
 .radio-div,
 .checkbox-div {
@@ -198,18 +274,77 @@ select {
   }
 }
 
+.radio-input-wrapper-span {
+  position: relative;
+
+  &:first-of-type {
+    margin-right: 2rem;
+  }
+
+  input {
+    position: absolute;
+    top: .5rem;
+  }
+
+  #form1_conservatory1 {
+    left: 2rem;
+  }
+
+  #form1_conservatory2 {
+    left: 1.5rem;
+  }
+}
+
+.required-span {
+  color: $accent-font-colour;
+}
+
+.neighbour-refferal-div,
+.contact-form-terms,
+.form-consent-div {
+  margin-bottom: $section-spacing;
+}
 
 #form1_submit {
   background-color: $link-colour;
   border: 0;
   transition: all $transition-duration;
   margin-top: $small-section-spacing;
+  border-radius: 5px;
 
   &:hover,
   &:focus {
     background-color: $darker-link-colour;
     color: $light-font-colour;
   }
+}
+.contact-form-terms {
+  padding: 0.5rem;
+  border: 2px solid $light-font-colour;
+  font-size: $smaller-font-size;
+
+ @include first-and-last-paragraph;
+
+}
+
+.success {
+  text-align: center;
+}
+
+//********** Validation **********
+
+.form-input-validation {
+  &:invalid {
+    border: 3px solid $warning;
+  }
+
+  &:valid {
+    border: 3px solid $valid;
+  }
+}
+
+.not-valid {
+  border: 3px solid $warning !important;
 }
 
 //********** Anti Spam **********
@@ -228,5 +363,105 @@ select {
 // *=========================================
 
 footer {
-  padding: $small-section-spacing $large-section-spacing;
+  @include flex(column);
+  align-items: center;
+  padding: $section-spacing;
+  border-top: 4px solid #fff;
+  margin: 0 10px;
+  @include font-stack;
+
+  a {
+    color: $light-font-colour;
+  }
+
+  p {
+    margin: 0;
+    font-size: $main-font-size;
+    line-height: 1.1;
+    text-align: center;
+  }
+}
+
+.footer-contact,
+.footer-legal,
+.footer-promo {
+  text-align: center;
+  margin-bottom: $section-spacing;
+}
+
+//*==============================================================================
+//** Pages  **
+//*==============================================================================
+
+//*=========================================
+//** Top Section  **
+//*=========================================
+
+//********** Top images **********
+
+.main-image-div {
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.main-body-image {
+  border-top: 1px solid $dark-font-colour;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+
+  @include breakpoint(1200) {
+    min-height: 40vh;
+  }
+}
+
+.side-banner-image {
+  position: absolute;
+  right: -450px;
+  opacity: 0;
+  top: 1rem;
+  animation: slide-in 1s ease-out 1s forwards;
+
+  @include breakpoint(1500) {
+    width: 350px;
+  }
+
+  @include breakpoint(800) {
+   width: 250px;
+  }
+
+  @include breakpoint(400) {
+    width: 200px;
+  }
+}
+
+//********** Homepage Top Section Text **********
+
+.page-heading {
+  text-align: center;
+  color: $accent-font-colour;
+  font-size: $heading-size-large;
+  font-weight: 400;
+  margin: $section-spacing auto;
+
+  @include breakpoint(800) {
+    font-size: $heading-size-medium;
+  }
+}
+
+
+.general-text-area {
+  text-align: center;
+  margin-bottom: $section-spacing;
+
+  @include first-and-last-paragraph;
+}
+
+#map {
+  height: 450px;
+  width: 100%;
+  color: $dark-font-colour;
+  border-top: 4px solid #000;
 }

@@ -1,0 +1,25 @@
+//*==============================================================================
+//** FAQ's  **
+//*==============================================================================
+
+//********** Imports **********
+
+@import 'bits';
+
+.general-text-area {
+  font-size: $larger-font-size;
+  margin-bottom: $large-section-spacing;
+}
+
+.faq-heading {
+  text-align: center;
+  color: $accent-font-colour;
+  font-size: $main-font-size;
+  font-weight: normal;
+  margin: 0 auto $paragraph-spacing-small;
+}
+
+.faq-text-area {
+  font-size: $main-font-size;
+  margin-bottom: $section-spacing;
+}

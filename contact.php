@@ -1,10 +1,9 @@
 <?php include('perch/runtime.php'); ?>
-<?php perch_layout('main-header'); ?>
+<?php perch_layout("main-header"); ?>
 <main class="main-content contact-main-content">
-	<h1>Hello World</h1>
-	<section>
-	  <?php perch_content('Placeholder'); ?>
-	</section>
+	<?php perch_layout("google-map"); ?>
+	<?php perch_content("Contact Form Heading"); ?>
+	<?php perch_content("Contact Form"); ?>
 </main>
 <?php perch_layout('main-footer'); ?>
 <!-- <?php PerchUtil::output_debug(); ?> -->

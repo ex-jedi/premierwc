@@ -1,43 +1,11 @@
 //*==============================================================================
-//** Homepage Styles  **
+//** Homepage  **
 //*==============================================================================
 
 //********** Imports **********
 
-@import "bits";
+@import 'bits';
 
-//*=========================================
-//** Top Section  **
-//*=========================================
-
-//********** Homepage images **********
-
-.main-image-div {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.main-body-image {
-  border-top: 1px solid $dark-font-colour;
-  width: 100%;
-}
-
-.side-banner-image {
-  position: absolute;
-  right: -0.5rem;
-  top: 1rem;
-}
-
-//********** Homepage Top Section Text **********
-
-.homepage-heading {
-  text-align: center;
-  color: $accent-font-colour;
-  font-size: 2.25rem;
-  font-weight: 400;
-  margin: $section-spacing auto;
-}
 
 //* Bracket List Div
 
@@ -46,24 +14,69 @@
   margin: 0 auto $section-spacing;
   width: fit-content;
   font-size: 1.75rem;
+
+  @include breakpoint(700) {
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint(550) {
+    font-size: 1.5rem;
+  }
 }
 
 .homepage-list {
   margin-right: 1rem;
   padding-right: 4rem;
   position: relative;
+  width: 50%;
+
+  @include breakpoint(1250) {
+    flex: 1 1 auto;
+  }
+
+  @include breakpoint(700) {
+    @include flex(column);
+    align-items: center;
+    width: fit-content;
+    margin-bottom: $small-section-spacing;
+    background-image: url('/images/bracket-rotated.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding: 0 0 $large-section-spacing 1.5rem;
+    background-size: 15rem;
+  }
+
+  @include breakpoint(400) {
+    padding-bottom: $section-spacing;
+    background-size: 11rem;
+  }
+
 
   &::after {
     content: url("/images/bracket.png");
     position: absolute;
     top: 1px;
     right: 0;
+
+    @include breakpoint(700) {
+      content: "";
+    }
   }
 }
 
 .homepage-list-after {
   @include flex(column);
   justify-content: center;
+  width: 50%;
+
+  @include breakpoint(1250) {
+    flex: 1 1 auto;
+  }
+
+  @include breakpoint(700) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .first-after-paragraph {
@@ -78,19 +91,14 @@
   margin: 1rem 0 0;
 }
 
-.homepage-text-area {
-  text-align: center;
-}
-
 .homepage-pricing-link {
   display: block;
   color: $dark-font-colour;
   width: fit-content;
   margin: $large-section-spacing auto;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
   background-color: $accent-font-colour;
   transition: all $transition-duration;
 

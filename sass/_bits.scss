@@ -45,6 +45,48 @@ $grid-gap: 0 1rem;
   font-family: "Crimson Text", serif;
 }
 
+//Paragraph Top and Bottom Margin Mixin
+
+@mixin first-and-last-paragraph {
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//********** Spacing & Sizing  **********
+
+//Font Sizing
+$main-font-size: 1.25rem;
+$larger-font-size: 1.5rem;
+$smaller-font-size: 1rem;
+
+//Heading Sizes
+$heading-size-large: 3.5rem;
+$heading-size-medium: 2.5rem;
+$heading-size-small: $main-font-size;
+
+//Sections
+$large-section-spacing: 5rem;
+$section-spacing: 3.5rem;
+$small-section-spacing: 1rem;
+
+// Wrapper
+$wrapper-spacing-large: 10%;
+$wrapper-spacing: 5%;
+
+//Paragraphs
+$large-paragraph-spacing: 3rem;
+$paragraph-spacing: 1.5rem;
+$paragraph-spacing-small: .5rem;
+
+//Forms
+$input-spacing: 1%;
+
 //Fancy Link Underline
 @mixin link-underline($colour) {
   transition: all $transition-duration;
@@ -62,6 +104,20 @@ $grid-gap: 0 1rem;
     @include breakpoint(500) {
       border-bottom: 3px solid transparent;
     }
+  }
+}
+
+//*=========================================
+//** Animation  **
+//*=========================================
+
+@keyframes slide-in{
+  30% {
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
   }
 }
 
@@ -83,6 +139,11 @@ $darker-link-colour: #579c92;
 //Background Colours
 $dark-background-colour: #231f20;
 $light-background-colour: #f2f0eb;
+$darkest-background-colour: #000;
+
+//Other colours
+$warning: #d81818;
+$valid: #10d609;
 
 //********** Transition Timings**********
 
@@ -90,27 +151,7 @@ $transition-duration: 0.3s ease-in-out 0s;
 $transition-duration-fast: 0.2s ease-in-out 0s;
 $transition-duration-slow: 0.8s ease-in-out 0s;
 
-//********** Spacing & layout  **********
 
-//Headings
-$large-h1-spacing: 5rem;
-$h1-spacing: 2.5rem;
-$h2-spacing: 1.5rem;
-$h3-spacing: 1rem;
-
-//Sections
-$large-section-spacing: 5rem;
-$section-spacing: 2.5rem;
-$small-section-spacing: 1rem;
-
-//Paragraphs
-$large-paragraph-spacing: 3rem;
-$paragraph-spacing: 1.5rem;
-
-//Forms
-$input-spacing: 1%;
-
-//Other Spacing
 
 // =========================================
 // ** Browser Quirks  **

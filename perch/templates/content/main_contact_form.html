@@ -1,49 +1,54 @@
 <section class="contact-form-section">
-    <h2 class="contact-form-heading">
-        <perch:content id="contactFormHeading" type="text" label="Contact Form Heading" divider-before="Contact Form" help="Optional heading for the contact form">
-    </h2>
 
   <perch:form class="main-contact-form" id="contact" method="post" app="perch_forms">
 
-    <div>
-        <perch:label for="name">Name <span title="Required">*</span></perch:label>
+    <div class="main-contact-field-div">
+        <perch:label for="email">Email (please make sure it's correct) <span class="required-span" title="Required">*</span></perch:label>
+        <perch:input type="email" class="email-input" id="email" label="Email">
+    </div>
+      <!-- TODO Add email prompt thing -->
+
+    <div class="main-contact-field-div" >
+        <perch:label for="name">First name and surname <span class="required-span" title="Required">*</span></perch:label>
         <perch:input type="text" id="name" required="true" label="Name">
-        <perch:error class="form-error" for="name" type="required">Please check your name.</perch:error>
     </div>
 
-    <div>
-        <perch:label for="tel">Phone Number <span title="Required">*</span></perch:label>
+    <div class="main-contact-field-div">
+        <perch:label for="tel">Phone Number <span class="required-span" title="Required">*</span></perch:label>
         <perch:input type="tel" id="tel" required="true" label="Phone Number">
     </div>
 
-    <div>
-        <perch:label for="email">Email <span title="Required">*</span></perch:label>
-        <perch:input type="email" id="email" label="Email">
+
+    <div class="main-contact-field-div">
+        <perch:label for="homeNumber">House or flat number <span class="required-span"  title="Required">&ast;</span></perch:label>
+        <perch:input type="text" id="homeNumber" required="true" label="House/flat number">
     </div>
 
-    <div>
-        <perch:label for="addressone">First line of address <span title="Required">&ast;</span></perch:label>
-        <perch:input type="text" id="addressone" required="true" label="First Line Of Address">
+    <div class="main-contact-field-div">
+        <perch:label for="addressStreet">Street <span class="required-span"  title="Required">&ast;</span></perch:label>
+        <perch:input type="text" id="addressStreet" required="true" label="Street">
     </div>
 
-    <div>
-        <perch:label for="postcode">Postcode <span title="Required">&ast;</span></perch:label>
+    <div class="main-contact-field-div">
+        <perch:label for="postcode">Postcode <span class="required-span"  title="Required">&ast;</span></perch:label>
         <perch:input type="text" id="postcode" required="true" label="Postcode">
     </div>
 
-    <div>
-      <perch:label for="housesize">House size</perch:label>
-      <perch:input id="housesize" type="select" label="House Size" required placeholder="Choose an option"  options="One bedroom,Two bedrooms,Three bedrooms,Four bedrooms,Five bedrooms,Six bedrooms,Seven bedrooms,More than seven bedrooms" >
+    <div class="main-contact-field-div">
+      <perch:label for="housesize">House size  <span class="required-span"  title="Required">&ast;</span></perch:label>
+      <perch:input id="housesize" type="select" label="House Size" required placeholder="Choose an option" required  options="One bedroom,Two bedrooms,Three bedrooms,Four bedrooms,Five bedrooms,Six bedrooms,Seven bedrooms,More than seven bedrooms" >
     </div>
 
-    <div>
-        <perch:label for="housefloors">Number of floors <span title="Required">*</span></perch:label>
+    <div class="main-contact-field-div">
+        <perch:label for="housefloors">Number of floors <span class="required-span"  title="Required">*</span></perch:label>
         <perch:input class="" id="housefloors" type="select" label="Number of floors" required placeholder="Choose an option" options="Bungalow/Ground floor flat,2 storey house/1st floor flat,3 storey house/2nd floor flat">
     </div>
 
     <div class="radio-div">
-        <perch:label for="conservatory">Do you have a conservatory? <span title="Required">*</span></perch:label>
-        <perch:input class="" id="conservatory" type="radio" label="Conservatory"  required options="Yes,No">
+        <perch:label for="conservatory">Do you have a conservatory? <span class="required-span"  title="Required">*</span></perch:label>
+        <div class="form-radio-inner">
+            <perch:input class="" id="conservatory" type="radio" label="Conservatory"  options="Yes,No" wrap="span.radio-input-wrapper-span" required>
+        </div>
     </div>
 
     <div class="form-identification-number">
@@ -51,9 +56,21 @@
         <perch:input type="text" id="messageAreaOne" aria-hidden="true" autocomplete="off" antispam="honeypot" />
     </div>
 
-    <div class="checkbox-div">
+    <div class="main-contact-field-div neighbour-refferal-div">
+        <perch:label for="neighbourRefferal">Were we recommended to you by a neighbour? If so, please let us know the first line of their address </perch:label>
+        <perch:input class="" id="neighbourRefferal" type="text" label="Neighbour Refferal">
+    </div>
+
+    <perch:if exists="contactFormTerms">
+        <div class="contact-form-terms">
+            <perch:content id="contactFormTerms" type="textarea" editor="redactor" label="Optional Contact Form Terms"  html>
+        </div>
+    </perch:if>
+
+
+    <div class="checkbox-div form-consent-div">
         <perch:input class="consent-checkbox" id="consentCheck" type="checkbox" label="Consent Checkbox" value="Yes"  required>
-        <perch:label class="consent-check-label" for="consentCheck">By checking this box you accept the <a target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">Premier Window Cleaning Privacy and Cookie Policy.</a>  </perch:label>
+        <perch:label class="consent-check-label" for="consentCheck">By checking this box you accept the <a target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">Premier Window Cleaning Privacy and Cookie Policy.</a> <span class="required-span" title="Required">*</span></perch:label>
     </div>
 
     <div class="form-submit-div">

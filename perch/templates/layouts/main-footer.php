@@ -1,19 +1,21 @@
 <footer class="main-footer">
+	<div class="footer-contact">
+		<?php perch_content("Footer Address"); ?>
+	</div>
 	<div class="footer-legal">
-		<p class="copyright" >&copy; <?php echo date("Y"); ?> Premier Window Cleaning</p>
-		<p class="privacy"><a href="/privacy-policy.php">PRIVACY &amp; COOKIE PRIVACY POLICY</a></p>
-		<p class="terms"><a href="/terms.php">TERMS OF USE</a></p>
+		<p class="privacy"><a href="/privacy-and-cookie-policy.php">Privacy &amp; cookie policy</a></p>
+		<p class="terms"><a href="/terms.php">Terms of use</a></p>
 	</div>
 	<div class="footer-promo">
 		<p>
-			WEB DESIGN & DEVELOPMENT, BRAND DESIGN & ILLUSTRATION BY <a href="" class="promo-link">phoenix & phoenix</a>
+			Site build by <a href="https://pixelsmiths.co.uk/" class="promo-link">Pixelsmiths</a>
 		</p>
 	</div>
+	<p class="copyright" >&copy; <?php echo date("Y"); ?> Premier Window Cleaning</p>
 </footer>
 </div> <!-- wrapper div -->
-<!-- TODO: Change Vue to production  version -->
-<script type="text/javascript" src="/scripts/minified/vue-min.js" ></script>
 <!-- General JS file -->
-<script type="text/javascript" src="/scripts/minified/universal-min.js"></script><!-- Local universal JS files -->
+<script type="text/javascript" src="/scripts/min/universal-min.js"></script><!-- Local universal JS files -->
 </body>
 </html>
+
