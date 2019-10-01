@@ -107,3 +107,20 @@
     color: $light-font-colour;
   }
 }
+
+.go-cardless {
+  text-align: center;
+  margin-top: $section-spacing;
+  font-size: $larger-font-size;
+  color: $accent-font-colour;
+}
+
+.go-cardless-image {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+
+  @include breakpoint(1000) {
+    width: 100%;
+  }
+}

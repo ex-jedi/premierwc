@@ -366,7 +366,7 @@ footer {
   @include flex(column);
   align-items: center;
   padding: $section-spacing;
-  border-top: 4px solid #fff;
+  border-top: 2px solid #fff;
   margin: 0 10px;
   @include font-stack;
 
@@ -407,7 +407,7 @@ footer {
 }
 
 .main-body-image {
-  border-top: 1px solid $dark-font-colour;
+  border-top: 3px solid $dark-font-colour;
   width: 100%;
   object-fit: cover;
   display: block;
