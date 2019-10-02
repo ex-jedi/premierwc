@@ -1,79 +1,66 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html>
 <head>
     <title><perch:email id="email_subject"></title>
 </head>
-
 <body>
-  <style></style>
-  <wrapper class="header" bgcolor="#8a8a8a" style="background: #8a8a8a;">
-    <container>
-      <row class="collapse">
-        <columns small="6" valign="middle">
-          <img src="/perch/resources/main-logo.png">
-        </columns>
-        <columns small="6" valign="middle">
-          <p class="text-right" style="color: #fff; margin-bottom: 0;">BASIC</p>
-        </columns>
-      </row>
-    </container>
-  </wrapper>
-
-  <container>
-
-    <spacer size="16"></spacer>
-
-    <row>
-      <columns>
-        <h1>
-          <perch:email id="email_subject">
-        </h1>
-        <p class="lead">
-            <perch:email id="email_message" encode="false">
-          </p>
-        <p>
-          <perch:email id="email">
-        </p>
-        <p>
-          <perch:email id="name">
-        </p>
-        <p>
-          <perch:email id="tel">
-        </p>
-        <p>
-        	<perch:email id="homeNumber">
-        </p>
-        <p>
-        	<perch:email id="addressStreet">
-        </p>
-        <p>
-        	<perch:email id="postcode">
-        </p>
-        <p>
-        	<perch:email id="housesize">
-        </p>
-        <p>
-        	<perch:email id="housefloors">
-        </p>
-        <p>
-        	<perch:email id="conservatory">
-        </p>
-        <p>
-        	<perch:email id="neighbourRefferal">
-        </p>
-        <p>
-        	<perch:email id="consentCheck">
-        </p>
-
-
-      </columns>
-    </row>
-
-  </container>
+    <h1>
+        <perch:email id="email_subject">
+      </h1>
+  <table>
+    <tr>
+      <th>Message</th>
+      <td><perch:email id="message" encode="false"></td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td><perch:email id="name"></td>
+    </tr>
+    <tr>
+      <th>Tel</th>
+      <td><perch:email id="tel"></td>
+    </tr>
+    <tr>
+      <th>House/Flat Number</th>
+      <td><perch:email id="homeNumber"></td>
+    </tr>
+    <tr>
+      <th>Street</th>
+      <td><perch:email id="addressStreet"></td>
+    </tr>
+    <tr>
+      <th>Postcode</th>
+      <td><perch:email id="postcode">
+        </td>
+    </tr>
+    <tr>
+      <th>House/Flat Size</th>
+      <td><perch:email id="housesize"></td>
+    </tr>
+    <tr>
+      <th>House/Flat Size 2</th>
+      <td><perch:email id="housefloors"></td>
+    </tr>
+    <tr>
+      <th>Conservatory</th>
+      <td><perch:email id="conservatory"></td>
+    </tr>
+    <tr>
+      <th>Neighbour Referral</th>
+      <td><perch:email id="neighbourRefferal"></td>
+    </tr>
+    <tr>
+      <th>Terms Consent Check</th>
+      <td><perch:email id="consentCheck"></td>
+    </tr>
+  </table>
 </body>
-
 </html>
+
+
+
+
+
+
 
 
 
