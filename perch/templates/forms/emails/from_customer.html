@@ -1,170 +1,57 @@
-<!--
-	HTML Email Starter Kit
-	Documentation: https://github.com/timothylong/html-email-starter-kit
--->
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1">
-    <!--[if !mso]>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <![endif]-->
-    <meta name="x-apple-disable-message-reformatting">
     <title><perch:email id="email_subject"></title>
-
-    <!--[if mso]>
-        <style>
-            * { font-family: sans-serif !important; }
-        </style>
-    <![endif]-->
-    <!--[if !mso]><!-->
-        <!-- Insert font reference, e.g. <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet"> -->
-    <!--<![endif]-->
-    <style>
-        *,
-        *:after,
-        *:before {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        * {
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-        }
-        html,
-        body,
-        .document {
-            width: 100% !important;
-            height: 100% !important;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-        }
-        div[style*="margin: 16px 0"] {
-            margin: 0 !important;
-        }
-        table,
-        td {
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt;
-        }
-        table {
-            border-spacing: 0;
-            border-collapse: collapse;
-            table-layout: fixed;
-            margin: 0 auto;
-        }
-        img {
-            -ms-interpolation-mode: bicubic;
-            max-width: 100%;
-            border: 0;
-        }
-        *[x-apple-data-detectors] {
-            color: inherit !important;
-            text-decoration: none !important;
-        }
-        .x-gmail-data-detectors,
-        .x-gmail-data-detectors *,
-        .aBn {
-            border-bottom: 0 !important;
-            cursor: default !important;
-        }
-        .btn {
-            -webkit-transition: all 200ms ease;
-            transition: all 200ms ease;
-        }
-        .btn:hover {
-            background-color: dodgerblue;
-        }
-        @media screen and (max-width: 750px) {
-            .container {
-                width: 100%;
-                margin: auto;
-            }
-            .stack {
-                display: block;
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
-    <div style="display: none; max-height: 0px; overflow: hidden;">
-        <!-- Preheader message here -->
-    </div>
-    <div style="display: none; max-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div>
-    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" class="document">
-        <tr>
-            <td valign="top">
-                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="750" class="container">
-                    <tr>
-                        <td>
-                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-                                <tr>
-                                    <td>
-                                        <h1>
-                                            <perch:email id="email_subject">
-                                          </h1>
-                                      <table>
-                                        <tr>
-                                          <td><perch:email id="message" encode="false"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>Name</th>
-                                          <td><perch:email id="name"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>Tel</th>
-                                          <td><perch:email id="tel"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>House/Flat Number</th>
-                                          <td><perch:email id="homeNumber"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>Street</th>
-                                          <td><perch:email id="addressStreet"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>Postcode</th>
-                                          <td><perch:email id="postcode">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                          <th>House/Flat Size</th>
-                                          <td><perch:email id="housesize"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>House/Flat Size 2</th>
-                                          <td><perch:email id="housefloors"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>Conservatory</th>
-                                          <td><perch:email id="conservatory"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>Neighbour Referral</th>
-                                          <td><perch:email id="neighbourRefferal"></td>
-                                        </tr>
-                                        <tr>
-                                          <th>Terms Consent Check</th>
-                                          <td><perch:email id="consentCheck"></td>
-                                        </tr>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+    <h1>
+        <perch:email id="email_subject">
+      </h1>
+  <table cellspacing="0" cellpadding="10" border="1" align="center">
+    <tr>
+      <th align="left">Message</th>
+      <td><perch:email id="message" encode="false"></td>
+    </tr>
+    <tr>
+      <th align="left">Name</th>
+      <td><perch:email id="name"></td>
+    </tr>
+    <tr>
+      <th align="left">Tel</th>
+      <td><perch:email id="tel"></td>
+    </tr>
+    <tr>
+      <th align="left">House/Flat Number</th>
+      <td><perch:email id="homeNumber"></td>
+    </tr>
+    <tr>
+      <th align="left">Street</th>
+      <td><perch:email id="addressStreet"></td>
+    </tr>
+    <tr>
+      <th align="left">Postcode</th>
+      <td><perch:email id="postcode">
+        </td>
+    </tr>
+    <tr>
+      <th align="left">House/Flat Size</th>
+      <td><perch:email id="housesize"></td>
+    </tr>
+    <tr>
+      <th align="left">House/Flat Size 2</th>
+      <td><perch:email id="housefloors"></td>
+    </tr>
+    <tr>
+      <th align="left">Conservatory</th>
+      <td><perch:email id="conservatory"></td>
+    </tr>
+    <tr>
+      <th align="left">Neighbour Referral</th>
+      <td><perch:email id="neighbourRefferal"></td>
+    </tr>
+    <tr>
+      <th align="left">Terms Consent Check</th>
+      <td><perch:email id="consentCheck"></td>
+    </tr>
+  </table>
 </body>
 </html>
