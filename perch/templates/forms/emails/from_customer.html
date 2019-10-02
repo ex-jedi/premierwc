@@ -1,0 +1,78 @@
+<html>
+<head>
+    <style type="text/css">
+
+      .header {
+        background: #8a8a8a;
+      }
+
+      .header .columns {
+        padding-bottom: 0;
+      }
+
+      .header p {
+        color: #fff;
+        margin-bottom: 0;
+      }
+
+      .header .wrapper-inner {
+        padding: 20px; /*controls the height of the header*/
+      }
+
+      .header .container {
+        background: #8a8a8a;
+      }
+
+      .wrapper.secondary {
+        background: #f3f3f3;
+      }
+
+      </style>
+    <title><perch:email id="email_subject"></title>
+</head>
+<body>
+    <wrapper class="header" bgcolor="#8a8a8a">
+        <container>
+          <row class="collapse">
+            <columns small="6" valign="middle">
+              <img src="/perch/resources/main-logo.png">
+            </columns>
+            <columns small="6" valign="middle">
+              <p class="text-right">BASIC</p>
+            </columns>
+          </row>
+        </container>
+      </wrapper>
+
+      <container>
+
+        <spacer size="16"></spacer>
+
+        <row>
+          <columns>
+            <h1>Form Response</h1>
+
+
+            <p class="lead"><perch:email id="email_message" encode="false"></p>
+            <callout class="primary">
+              <p>
+                  <perch:showall>
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus natus, sint ea optio dignissimos asperiores inventore a molestiae dolorum placeat repellat excepturi mollitia ducimus unde doloremque ad, alias eos!</p>
+            </callout>
+
+          </columns>
+        </row>
+
+      </container>
+</body>
+</html>
+
+
+
+
+
+
+  <!-- move the above styles into your custom stylesheet -->
+
+
