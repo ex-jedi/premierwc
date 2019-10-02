@@ -1,78 +1,78 @@
-<html>
-<head>
-    <style type="text/css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-      .header {
-        background: #8a8a8a;
-      }
+<head></head>
 
-      .header .columns {
-        padding-bottom: 0;
-      }
-
-      .header p {
-        color: #fff;
-        margin-bottom: 0;
-      }
-
-      .header .wrapper-inner {
-        padding: 20px; /*controls the height of the header*/
-      }
-
-      .header .container {
-        background: #8a8a8a;
-      }
-
-      .wrapper.secondary {
-        background: #f3f3f3;
-      }
-
-      </style>
-    <title><perch:email id="email_subject"></title>
-</head>
 <body>
-    <wrapper class="header" bgcolor="#8a8a8a">
-        <container>
-          <row class="collapse">
-            <columns small="6" valign="middle">
-              <img src="/perch/resources/main-logo.png">
-            </columns>
-            <columns small="6" valign="middle">
-              <p class="text-right">BASIC</p>
-            </columns>
-          </row>
-        </container>
-      </wrapper>
+  <style></style>
+  <wrapper class="header" bgcolor="#8a8a8a" style="background: #8a8a8a;">
+    <container>
+      <row class="collapse">
+        <columns small="6" valign="middle">
+          <img src="/perch/resources/main-logo.png">
+        </columns>
+        <columns small="6" valign="middle">
+          <p class="text-right" style="color: #fff; margin-bottom: 0;">BASIC</p>
+        </columns>
+      </row>
+    </container>
+  </wrapper>
 
-      <container>
+  <container>
 
-        <spacer size="16"></spacer>
+    <spacer size="16"></spacer>
 
-        <row>
-          <columns>
-            <h1>Form Response</h1>
+    <row>
+      <columns>
+        <h1>
+          <perch:email id="email_subject">
+        </h1>
+        <p class="lead">
+            <perch:email id="email_message" encode="false">
+          </p>
+        <p>
+          <perch:email id="email">
+        </p>
+        <p>
+          <perch:email id="name">
+        </p>
+        <p>
+          <perch:email id="tel">
+        </p>
+        <p>
+        	<perch:email id="homeNumber">
+        </p>
+        <p>
+        	<perch:email id="addressStreet">
+        </p>
+        <p>
+        	<perch:email id="postcode">
+        </p>
+        <p>
+        	<perch:email id="housesize">
+        </p>
+        <p>
+        	<perch:email id="housefloors">
+        </p>
+        <p>
+        	<perch:email id="conservatory">
+        </p>
+        <p>
+        	<perch:email id="neighbourRefferal">
+        </p>
+        <p>
+        	<perch:email id="consentCheck">
+        </p>
 
 
-            <p class="lead"><perch:email id="email_message" encode="false"></p>
-            <callout class="primary">
-              <p>
-                  <perch:showall>
-              </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus natus, sint ea optio dignissimos asperiores inventore a molestiae dolorum placeat repellat excepturi mollitia ducimus unde doloremque ad, alias eos!</p>
-            </callout>
+      </columns>
+    </row>
 
-          </columns>
-        </row>
-
-      </container>
+  </container>
 </body>
+
 </html>
 
 
-
-
-
-
-  <!-- move the above styles into your custom stylesheet -->
 
 

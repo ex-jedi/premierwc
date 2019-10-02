@@ -1,97 +1,72 @@
-<html>
-<head>
-    <style type="text/css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-      .header {
-        background: #8a8a8a;
-      }
+<head></head>
 
-      .header .columns {
-        padding-bottom: 0;
-      }
-
-      .header p {
-        color: #fff;
-        margin-bottom: 0;
-      }
-
-      .header .wrapper-inner {
-        padding: 20px; /*controls the height of the header*/
-      }
-
-      .header .container {
-        background: #8a8a8a;
-      }
-
-      .wrapper.secondary {
-        background: #f3f3f3;
-      }
-
-      </style>
-    <title><perch:email id="email_subject"></title>
-</head>
 <body>
-    <wrapper class="header" bgcolor="#8a8a8a">
-        <container>
-          <row class="collapse">
-            <columns small="6" valign="middle">
-              <img src="/perch/resources/main-logo.png">
-            </columns>
-            <columns small="6" valign="middle">
-              <p class="text-right">BASIC</p>
-            </columns>
-          </row>
-        </container>
-      </wrapper>
+  <style></style>
+  <wrapper class="header" bgcolor="#8a8a8a" style="background: #8a8a8a;">
+    <container>
+      <row class="collapse">
+        <columns small="6" valign="middle">
+          <img src="/perch/resources/main-logo.png">
+        </columns>
+        <columns small="6" valign="middle">
+          <p class="text-right" style="color: #fff; margin-bottom: 0;">BASIC</p>
+        </columns>
+      </row>
+    </container>
+  </wrapper>
 
-      <container>
+  <container>
 
-        <spacer size="16"></spacer>
+    <spacer size="16"></spacer>
 
-        <row>
-          <columns>
-            <h1>Hi <perch:email id="name"></h1>
+    <row>
+      <columns>
 
+        <h1><perch:email id="name"></h1>
+        <p class="lead">
+          <perch:email id="email_message" encode="false">
+        </p>
+        <p>We are a company with 25 years of experience in window cleaning and in that time we have seen the industry change an enormous amount. With the arrival of the water fed pole, window cleaners no longer have to take their lives in their hands by using ladders on uneven ground. It also means that there is no reason why you can’t have, not just your windows, but also your frames, sills, doors and even porch and garage door cleaned at the same time.</p>
+        <callout class="primary">
+          <p>
+            1 offer valid per household. For payment we use a simple, reliable online company called GoCardless.com. A GoCardless account needs to be set up before we carry out the 2nd clean. If you need to discuss other payment options, please email us at hello@premierwc.co.uk.
+          </p>
 
-            <p class="lead"><perch:email id="email_message" encode="false"></p>
-            <p>
-                <perch:showall>
-            </p>
-            <callout class="primary">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus natus, sint ea optio dignissimos asperiores inventore a molestiae dolorum placeat repellat excepturi mollitia ducimus unde doloremque ad, alias eos!</p>
-            </callout>
+        <p>
+          will only take payment from you after the windows are cleaned for the 4th time and after each clean from there on. You may cancel the service at any time, you are not tied in to a contract. There is no minimum period.
+        </p>
+        </callout>
 
-          </columns>
-        </row>
+      </columns>
+    </row>
 
-        <wrapper class="secondary">
-          <spacer size="16"></spacer>
-          <row>
-            <columns small="12" large="6">
-              <h5>Connect With Us:</h5>
-              <menu class="vertical">
-                <item style="text-align: left;" href="#">Twitter</item>
-                <item style="text-align: left;" href="#">Facebook</item>
-                <item style="text-align: left;" href="#">Google +</item>
-              </menu>
-            </columns>
-            <columns small="12" large="6">
-              <h5>Contact Info:</h5>
-              <p>Phone: 408-341-0600</p>
-              <p>Email: <a href="mailto:foundation@zurb.com">foundation@zurb.com</a></p>
-            </columns>
-          </row>
-        </wrapper>
+    <wrapper class="secondary">
+      <spacer size="16"></spacer>
+      <row>
+        <columns small="12" large="6">
+          <h5>Connect With Us:</h5>
+          <menu class="vertical">
+            <item style="text-align: left;" href="#">Twitter</item>
+            <item style="text-align: left;" href="#">Facebook</item>
+            <item style="text-align: left;" href="#">Google +</item>
+          </menu>
+        </columns>
+        <columns small="12" large="6">
+          <h5>Contact Info:</h5>
+          <p>Phone: 408-341-0600</p>
+          <p>Email: <a href="mailto:foundation@zurb.com">foundation@zurb.com</a></p>
+        </columns>
+      </row>
+    </wrapper>
 
-      </container>
+  </container>
 </body>
+
 </html>
 
 
-
-
-
-
-  <!-- move the above styles into your custom stylesheet -->
 
 
