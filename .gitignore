@@ -1,6 +1,6 @@
 #General Stuff
 node_modules
-
+prepros-6.config
 #Perch Files
 perch/resources/
 perch/addons/apps/perch_blog/import_data/
