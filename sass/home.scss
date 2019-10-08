@@ -6,7 +6,9 @@
 
 @import 'bits';
 
-
+.homepage-promo-section {
+  margin-bottom: $large-section-spacing;
+}
 //* Bracket List Div
 
 .homepage-bracket-list-div {
@@ -91,22 +93,6 @@
   margin: 1rem 0 0;
 }
 
-.homepage-pricing-link {
-  display: block;
-  color: $dark-font-colour;
-  width: fit-content;
-  margin: $large-section-spacing auto;
-  padding: 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  background-color: $accent-font-colour;
-  transition: all $transition-duration;
-
-  &:hover {
-    background-color: $darker-link-colour;
-    color: $light-font-colour;
-  }
-}
 
 .go-cardless {
   text-align: center;

@@ -6,15 +6,19 @@
         <perch:label for="email">Email (please make sure it's correct) <span class="required-span" title="Required">*</span></perch:label>
         <perch:input type="email" class="email-input" id="email" label="Email">
     </div>
-      <!-- TODO Add email prompt thing -->
 
     <div class="main-contact-field-div" >
-        <perch:label for="name">First name and surname <span class="required-span" title="Required">*</span></perch:label>
-        <perch:input type="text" id="name" required="true" label="Name">
+        <perch:label for="firstName">First name <span class="required-span" title="Required">*</span></perch:label>
+        <perch:input type="text" id="firstName" required="true" label="First Name">
+    </div>
+
+    <div class="main-contact-field-div" >
+        <perch:label for="lastName">Surname <span class="required-span" title="Required">*</span></perch:label>
+        <perch:input type="text" id="lastName" required="true" label="Surname">
     </div>
 
     <div class="main-contact-field-div">
-        <perch:label for="tel">Phone Number <span class="required-span" title="Required">*</span></perch:label>
+        <perch:label for="tel">Phone number <span class="required-span" title="Required">*</span></perch:label>
         <perch:input type="tel" id="tel" required="true" label="Phone Number">
     </div>
 
@@ -57,25 +61,27 @@
     </div>
 
     <div class="main-contact-field-div neighbour-refferal-div">
-        <perch:label for="neighbourRefferal">Were we recommended to you by a neighbour? If so, please let us know the first line of their address </perch:label>
+        <perch:label for="neighbourRefferal">Were we recommended to you by a neighbour? If so, please let us know their house number and road name.</perch:label>
         <perch:input class="" id="neighbourRefferal" type="text" label="Neighbour Refferal">
     </div>
 
-    <perch:if exists="contactFormTerms">
-        <div class="contact-form-terms">
-            <perch:content id="contactFormTerms" type="textarea" editor="redactor" label="Optional Contact Form Terms"  html>
-        </div>
-    </perch:if>
 
 
     <div class="checkbox-div form-consent-div">
         <perch:input class="consent-checkbox" id="consentCheck" type="checkbox" label="Consent Checkbox" value="Yes"  required>
-        <perch:label class="consent-check-label" for="consentCheck">By checking this box you accept the <a target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">Premier Window Cleaning Privacy and Cookie Policy.</a> <span class="required-span" title="Required">*</span></perch:label>
-    </div>
+            <perch:label class="consent-check-label" for="consentCheck">By checking this box you accept the <a target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">Premier Window Cleaning Privacy and Cookie Policy.</a> <span class="required-span" title="Required">*</span></perch:label>
+        </div>
 
-    <div class="form-submit-div">
-        <perch:input type="submit" id="submit" value="Send">
-    </div>
+
+        <div class="form-submit-div">
+            <perch:input type="submit" id="submit" value="Send">
+        </div>
+
+        <perch:if exists="contactFormTerms">
+            <div class="contact-form-terms">
+                <perch:content id="contactFormTerms" type="textarea" editor="redactor" label="Optional Contact Form Terms"  html>
+            </div>
+        </perch:if>
 
     <perch:success>
         <div class="success">
