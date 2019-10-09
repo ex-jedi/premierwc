@@ -252,6 +252,7 @@ section {
 
 .contact-form-heading {
   color: $accent-font-colour;
+  font-size: $heading-size-medium;
   font-weight: normal;
   text-align: center;
 }
@@ -299,8 +300,11 @@ section {
   color: $accent-font-colour;
 }
 
-.neighbour-refferal-div,
-.contact-form-terms,
+
+.contact-form-terms {
+  margin-bottom: $section-spacing;
+}
+
 .form-consent-div {
   margin-bottom: $section-spacing;
 }
@@ -309,7 +313,7 @@ section {
   background-color: $link-colour;
   border: 0;
   transition: all $transition-duration;
-  margin-top: $small-section-spacing;
+  margin: 0 0 $large-section-spacing;
   border-radius: 5px;
 
   &:hover,
@@ -325,10 +329,18 @@ section {
 
  @include first-and-last-paragraph;
 
+ h3 {
+   text-align: center;
+   color: $accent-font-colour;
+   margin-top: 0;
+   font-size: $main-font-size;
+ }
+
 }
 
 .success {
   text-align: center;
+  font-size: 2rem;
 }
 
 //********** Validation **********
